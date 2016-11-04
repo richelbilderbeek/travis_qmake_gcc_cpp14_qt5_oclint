@@ -8,7 +8,7 @@ h_files=`ls *.h`
   $cpp_files \
   $h_files \
   -- \
-  -c -std=c++14 \
+  -c -std=c++14 -fPIE \
   -I/usr/include/c++/5 \
   -I/usr/include/x86_64-linux-gnu/c++/5 \
   -I/usr/include/qt5 \
