@@ -1,0 +1,25 @@
+#include "my_dialog.h"
+#include "ui_my_dialog.h"
+#include <QTimer>
+
+my_dialog::my_dialog(QWidget *parent) :
+  QDialog(parent),
+  ui(new Ui::my_dialog)
+{
+  ui->setupUi(this);
+  QTimer * const timer(new QTimer(this));
+  //Connect signals and slot using Qt5 syntax
+  connect(
+    timer,
+    &QTimer::timeout,
+    this,
+    &my_dialog::close
+  );
+  timer->setInterval(1'000); //C++14 supports digit seperators
+  timer->start();
+}
+
+my_dialog::~my_dialog() noexcept
+{
+  delete ui;
+}
