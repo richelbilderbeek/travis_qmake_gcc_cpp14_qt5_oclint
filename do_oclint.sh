@@ -10,7 +10,11 @@ h_files=`ls *.h`
   -- \
   -c -std=c++14 \
   -I/usr/include/c++/5 \
-  -I/usr/include/x86_64-linux-gnu/c++/5
+  -I/usr/include/x86_64-linux-gnu/c++/5 \
+  -I/usr/include/qt5 \
+  -I/usr/include/qt5/QtCore \
+  -I/usr/include/qt5/QtGui \
+  -I/usr/include/qt5/QtWidgets 
 
 cat oclint.log
 
