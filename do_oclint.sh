@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cpp_files=`ls *.cpp | egrep -v "^moc_.*\.cpp$"`
+cpp_files=`ls *.cpp | egrep -v "^moc_.*\.cpp$" | egrep -v "^qrc_.*\.cpp$"`
 h_files=`ls *.h`
 
 ./oclint-0.10.3/bin/oclint -o oclint.log \
